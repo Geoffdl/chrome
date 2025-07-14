@@ -71,8 +71,8 @@
    *  If enabled the max-width is applied on focus
    *  otherwise the URL Bar will always be it's min-width
    */
-  --uc-urlbar-min-width: 35vw;
-  --uc-urlbar-max-width: 35vw;
+  --uc-urlbar-min-width: 20vw;
+  --uc-urlbar-max-width: 20vw;
 
   /*  Position of the URL Bar
    *  possible values:
@@ -99,18 +99,20 @@
 
 /* Encryption and Permissions icons */
 /* Only hides permission items */
-#identity-permission-box {
+/* #identity-permission-box {
   display: none !important;
-}
+} */
 /* Hides extension page box */
-#identity-box.extensionPage {
+/* #identity-box.extensionPage {
   display: none !important;
-}
+} */
 /* Hides encryption AND permission items */
 /* #identity-box { display: none !important } */
 
 /* Hide everything BUT the zoom indicator within the URL Bar */
-/* #page-action-buttons > :not(#urlbar-zoom-button) { display: none !important; } */
+#page-action-buttons > :not(#urlbar-zoom-button) {
+  display: none !important;
+}
 
 /* Hide the »Go«-arrow in the URL Bar */
 #urlbar-go-button {
@@ -143,14 +145,14 @@
    *  show: -moz-inline-block
    *  hide: none
    */
-  --show-tab-close-button-hover: none;
+  --show-tab-close-button-hover: -moz-inline-block;
 
   /*  Hide the all Tabs button from the Tab Bar
    *  possible values:
    *  show: -moz-box
    *  hide: none
    */
-  --uc-show-all-tabs-button: none;
+  --uc-show-all-tabs-button: -moz-box;
 
   /*  Left and Right "dip" of the container indicator
    *  0px equals tab width
