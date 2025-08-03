@@ -16,10 +16,10 @@
     --uc-identity-colour-purple: #cba6f7;
 
     /*  Cascades main Colour Scheme */
-    --uc-base-colour: #181926;
-    --uc-highlight-colour: #131836;
-    --uc-inverted-colour: #cdd6f4;
-    --uc-muted-colour: #6c7086;
+    --uc-base-colour: #11111b;
+    --uc-highlight-colour: #181825;
+    --uc-inverted-colour: #9399b2;
+    --uc-muted-colour: #313244;
     --uc-accent-colour: var(--uc-identity-colour-purple);
   }
 }
