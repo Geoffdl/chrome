@@ -5,7 +5,7 @@
   | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
   +-----+-----+-----+-----+-----+-----+-----+
 
-  Description:    Cascade is a minimalstic and keyboard centered custom theme removing a lot of the
+  Description:    Cascade is a minimalistic and keyboard centered custom theme removing a lot of the
                   subjective clutter default Firefox comes with. This theme is highly inspired by the
                   stylistic choices of SimpleFox by Miguel Ávila. 🦊
                   https://github.com/migueravila/SimpleFox
@@ -27,7 +27,7 @@
 *==============================================================================================*/
 
 @import "includes/cascade-config.css";
-@import "includes/cascade-colours.css";
+@import "includes/cascade-mocha.css";
 
 @import "includes/cascade-layout.css";
 @import "includes/cascade-responsive.css";
@@ -35,5 +35,3 @@
 
 @import "includes/cascade-nav-bar.css";
 @import "includes/cascade-tabs.css";
-@import "includes/center-bookmarks.css";
-/* @import "integrations/tabcenter-reborn/cascade-tcr.css"; */

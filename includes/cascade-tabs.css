@@ -5,7 +5,7 @@
   margin-inline-start: 0 !important;
 }
 
-/* Hides the list-all-tabs button*/
+/* hides the list-all-tabs button*/
 #alltabs-button {
   display: var(--uc-show-all-tabs-button) !important;
 }
@@ -32,10 +32,10 @@
 }
 
 /* adaptive tab width */
-.tabbrowser-tab[selected][fadein]:not([pinned]) {
+.tabbrowser-tab[selected][fadein]:not([pinned]):not(tab-group[collapsed] .tabbrowser-tab) {
   max-width: var(--uc-active-tab-width) !important;
 }
-.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]):not(tab-group[collapsed] .tabbrowser-tab) {
   max-width: var(--uc-inactive-tab-width) !important;
 }
 
@@ -44,7 +44,7 @@
   > .tab-stack
   > .tab-background
   > .tab-context-line {
-  margin: -1px var(--container-tabs-indicator-margin) 0
+  margin: 2px var(--container-tabs-indicator-margin) 0
     var(--container-tabs-indicator-margin) !important;
   height: 1px !important;
 
@@ -56,7 +56,7 @@
   opacity: 1 !important;
 }
 
-/* Makes the speaker icon to always appear if the tab is playing (not only on hover) */
+/* makes the speaker icon to always appear if the tab is playing (not only on hover) */
 .tab-icon-overlay:not([crashed]),
 .tab-icon-overlay[pinned][crashed][selected] {
   top: 5px !important;
@@ -148,7 +148,20 @@
   color: var(--toolbar-bgcolor) !important;
 }
 
-/* selected tab colour fix*/
-.tabbrowser-tab[selected] .tab-content {
+/* selected tab colour fix */
+.tabbrowser-tab[selected] .tab-background {
   background-color: var(--uc-highlight-colour) !important;
+  outline: none !important;
+}
+.tab-background {
+  margin: 0px !important;
+  border-radius: 0px !important;
+}
+
+/* disable tab group label changing colour when collapsed */
+.tab-group-label-container > .tab-group-label {
+  outline: none !important;
+  color: light-dark(var(--tab-group-color-pale), var(--tab-group-label-text-dark)) !important;
+  background-color: light-dark(var(--tab-group-color), var(--tab-group-color-invert)) !important;
+  border-radius: var(--uc-border-radius) !important;
 }
